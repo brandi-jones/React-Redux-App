@@ -22,8 +22,8 @@ const CharactersForm = (props) => {
     )
 };
 
-//we use isFetchingData state here, so we need to map it to props in order to use it
-const mapStateToProps = state => {
+//we use isFetchingData state here in this component, so we need to map it to props in order to use it
+const mapStateToProps = (state) => {
     return {
         isFetchingData: state.isFetchingData
     }
