@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {getData} from "../actions/index.js";
-
+import {Button} from "reactstrap"
 
 const CharactersForm = (props) => {
 
@@ -16,16 +16,23 @@ const CharactersForm = (props) => {
             {props.isFetchingData ? (
                 <div>Currently fetching data...</div>
             ) : (
-                <button onClick={handleGetData}>Browse Characters</button>
+                //if the characters array state is empty, then render the button. Otherwise, render nothing.
+                props.characters.length === 0 ?  (
+                    <Button onClick={handleGetData}>Browse Characters</Button>
+                ) : (
+                    <></>
+                )
+                
             )}
         </>
     )
 };
 
-//we use isFetchingData state here in this component, so we need to map it to props in order to use it
+//we use isFetchingData and the characters array state here in this component, so we need to map it to props in order to use it
 const mapStateToProps = (state) => {
     return {
-        isFetchingData: state.isFetchingData
+        isFetchingData: state.isFetchingData,
+        characters: state.characters
     }
 }
 
