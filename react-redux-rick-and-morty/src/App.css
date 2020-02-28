@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Sigmar+One&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Sigmar One', cursive;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.characterCard {
+  width: 15%;
+  margin: 1%;
+  border: 2px solid black !important;
+}
