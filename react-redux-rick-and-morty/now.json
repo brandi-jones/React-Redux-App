@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "name": "react-redux-rick-and-morty",
+    "builds": [
+      { 
+       "src": "react-redux-rick-and-morty/package.json", 
+       "use": "@now/static-build", 
+       "config": {
+          "distDir": "build"
+          } 
+       }
+      ],
+    "routes": [
+        { 
+           "src": "/(.*)", 
+           "dest": "react-redux-rick-and-morty/$1" 
+        }
+    ]
+}
